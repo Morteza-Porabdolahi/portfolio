@@ -1,11 +1,11 @@
-import { Button } from "@/components/ui/button";
+import MainNav from "@/components/main-nav";
 
 export default function HomePage() {
   return (
-    <main className="">
-      <Button variant="outline">
-        hello
-      </Button>
-    </main>
+    <>
+      <header id="header">
+        <MainNav />
+      </header>
+    </>
   );
 }
