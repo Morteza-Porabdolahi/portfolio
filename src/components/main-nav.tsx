@@ -32,11 +32,11 @@ export default function MainNav() {
   }, [])
 
   return (
-    <nav className="fixed top-0 left-0 right-0">
+    <nav className="fixed z-10 top-0 left-0 right-0">
       <div className="bg-foreground p-4 sm:hidden">
         <Bars3Icon onClick={() => setIsOpen(o => !o)} className="size-8 stroke-background cursor-pointer" />
       </div>
-      <ul className={`${isActive ? 'sm:bg-foreground sm:text-background' : 'sm:text-foreground sm:bg-transparent'} flex flex-col sm:flex-row gap-6 uppercase bg-foreground origin-top-left [transition:transform_500ms,border-radius_900ms,background-color_200ms] text-background pl-8 pb-8 pt-2 sm:pt-8 sm:justify-center sm:pl-0 sm:gap-9 ${isOpen ? 'scale-1 rounded-none' : 'scale-0 [border-bottom-right-radius:30rem]'}`}>
+      <ul className={`${isActive ? 'sm:bg-foreground sm:text-background' : 'sm:text-foreground sm:bg-transparent'} flex flex-col sm:flex-row gap-6 uppercase bg-foreground origin-top-left [transition:transform_500ms,border-radius_900ms,background-color_200ms] text-background pl-8 pb-8 pt-2 sm:pt-8 sm:justify-center sm:pl-0 sm:[transition:transform_500ms,border-radius_900ms,background-color_0s] sm:gap-9 ${isOpen ? 'scale-1 rounded-none' : 'scale-0 [border-bottom-right-radius:30rem]'}`}>
         <li className={`transition-[opacity] delay-300 ${isOpen ? 'opacity-1' : 'opacity-0'}`}>
           <Link href="#header" className="nav-link">Home</Link>
         </li>
