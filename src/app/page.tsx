@@ -1,3 +1,4 @@
+import AboutMe from "@/components/about-me";
 import MainNav from "@/components/main-nav";
 import Projects from "@/components/projects";
 
@@ -13,6 +14,7 @@ export default function HomePage() {
       </header>
       <main>
         <Projects />
+        <AboutMe />
       </main>
     </>
   );
