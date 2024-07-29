@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 
 import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
+import { Toaster } from "@/components/ui/sooner";
 
 export const metadata: Metadata = {
   title: "Morteza Porabdolahi",
@@ -15,7 +16,12 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`dark ${GeistSans.variable}`}>
-      <body>{children}</body>
+      <body>
+        <main>
+          {children}
+        </main>
+        <Toaster />
+      </body>
     </html>
   );
 }

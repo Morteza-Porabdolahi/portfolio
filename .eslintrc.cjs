@@ -37,6 +37,10 @@ const config = {
           "attributes": false
         }
       }
+    ],
+    "@typescript-eslint/no-empty-interface": [
+      'error',
+      { allowSingleExtends: true }
     ]
   }
 }

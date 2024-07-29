@@ -1,4 +1,5 @@
 import AboutMe from "@/components/about-me";
+import ContactMe from "@/components/contact-me";
 import MainNav from "@/components/main-nav";
 import Projects from "@/components/projects";
 
@@ -12,10 +13,9 @@ export default function HomePage() {
         </h1>
         <p className="uppercase tracking-widest text-center">and this is my portfolio</p>
       </header>
-      <main>
-        <Projects />
-        <AboutMe />
-      </main>
+      <Projects />
+      <AboutMe />
+      <ContactMe />
     </>
   );
 }
