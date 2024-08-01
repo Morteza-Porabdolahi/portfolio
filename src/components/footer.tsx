@@ -15,7 +15,7 @@ export default function Footer() {
           </span>
           <a className="text-gray-500 underline hover:no-underline" href="https://github.com/Morteza-Porabdolahi" target="_blank" rel="noreferrer">Morteza</a>
         </p>
-        <div className="flex flex-wrap gap-4 my-5 items-center justify-center">
+        <div className="flex flex-wrap gap-4 my-8 items-center justify-center">
           <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/morteza-porabdolahi-2ba76a226/">
             <Linkedin className="transition-colors hover:text-amber-600" />
           </a>
