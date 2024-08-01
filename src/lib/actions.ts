@@ -2,7 +2,7 @@
 
 import { formSchema, type formSchemaType } from "./types"
 import EmailTemplate from '@/components/ui/email-template';
-import { resend } from "./utils";
+import { resend } from "./resend";
 
 export async function sendMessageAction(data: formSchemaType): Promise<{ error?: string; message?: string }> {
   const formData = formSchema.safeParse(data)
