@@ -1,5 +1,6 @@
 import AboutMe from "@/components/about-me";
 import ContactMe from "@/components/contact-me";
+import Footer from "@/components/footer";
 import MainNav from "@/components/main-nav";
 import Projects from "@/components/projects";
 
@@ -16,6 +17,7 @@ export default function HomePage() {
       <Projects />
       <AboutMe />
       <ContactMe />
+      <Footer />
     </>
   );
 }
