@@ -1,6 +1,7 @@
 import Project from "./project";
 import Section from "./ui/section";
 import Title from "./ui/title";
+import projects from '../data/data.json'
 
 export default function Projects() {
   return (
@@ -9,8 +10,8 @@ export default function Projects() {
         <Title text={["Featured", "Projects"]} />
         <div className="flex flex-wrap gap-6 justify-between">
           {
-            Array.from({ length: 4 }).map((_, i) => ({ id: i + 1 })).map(({ id }) => (
-              <Project key={id} />
+            projects.map(({ id, ...project }) => (
+              <Project key={id} project={project}/>
             ))
           }
         </div>

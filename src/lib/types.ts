@@ -37,4 +37,12 @@ export const formSchema = zfd.formData(z.object({
   }).min(4, { message: 'Message should be at least 4 characters' }).max(200, { message: 'Message should be at most 200 characters' })
 }));
 
+export type ProjectType = {
+  name: string;
+  url: string;
+  source_code_url: string;
+  image: string;
+  description: string;
+}
+
 export type formSchemaType = z.infer<typeof formSchema>
