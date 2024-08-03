@@ -74,3 +74,13 @@
     @apply tracking-widest hover:text-amber-600 transition-colors
   }
 }
+
+.project-media {
+  @media only screen and (min-width: 490px) {
+    width: calc(50% - .9rem);
+  }
+
+  @media only screen and (min-width: 968px) {
+    width: calc((100% / 3) - 1rem);
+  }
+}

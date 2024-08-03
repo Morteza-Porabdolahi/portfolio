@@ -17,9 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`dark ${GeistSans.variable}`}>
       <body>
-        <main>
-          {children}
-        </main>
+        {children}
         <Toaster />
       </body>
     </html>

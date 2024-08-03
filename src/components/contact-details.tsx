@@ -2,8 +2,8 @@ import Title from "./ui/title";
 
 export default function ContactDetails() {
   return (
-    <div>
-      <Title className="mt-20" text={["Contact", "Details"]} />
+    <div className="flex-1">
+      <Title className="mt-20 md:mt-0 md:text-left" text={["Contact", "Details"]} />
       <ul className="flex flex-col gap-4">
         <li>
           <span className="uppercase mb-4 block text-gray-500">email</span>
