@@ -3,7 +3,6 @@ import "@/styles/globals.css";
 import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
 import { Toaster } from "@/components/ui/sooner";
-import { Locale } from "i18n.config";
 
 export const metadata: Metadata = {
   title: "Morteza Porabdolahi",
@@ -14,10 +13,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  params: { lang }
-}: Readonly<{ children: React.ReactNode, params: { lang: Locale } }>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang={lang} className={`dark ${GeistSans.variable}`}>
+    <html lang="en" className={`dark ${GeistSans.variable}`}>
       <body>
         {children}
         <Toaster />
