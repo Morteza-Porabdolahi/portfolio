@@ -1,14 +1,24 @@
 import MainNav from "@/components/main-nav";
+import { useTranslations } from "next-intl";
 
 export default function Header() {
+  const t = useTranslations("Header.Message");
   return (
-    <header className="bg-[url('/morteza.jpg')] bg-no-repeat bg-cover bg-center px-5 flex flex-col gap-8 justify-center items-center min-h-dvh" id="header">
+    <header
+      className="flex min-h-dvh flex-col items-center justify-center gap-8 bg-[url('/morteza.jpg')] bg-cover bg-center bg-no-repeat px-5"
+      id="header"
+    >
       <MainNav />
-      <h1 className="text-4xl lg:text-6xl text-center font-thin flex flex-col gap-2 items-center">
-        Hello I&apos;m <b className="text-3xl lg:text-5xl font-black">Morteza Porabdolahi</b>
+      <h1 className="flex flex-col items-center gap-2 text-center text-4xl font-thin lg:text-6xl">
+        {t.rich("message", {
+          name: (myName) => (
+            <b className="text-3xl font-black lg:text-5xl">{myName}</b>
+          ),
+        })}
       </h1>
-      <p className="uppercase tracking-widest lg:text-lg text-center">and this is my portfolio</p>
+      <p className="text-center uppercase tracking-widest lg:text-lg">
+        {t("description")}
+      </p>
     </header>
-  )
+  );
 }
-

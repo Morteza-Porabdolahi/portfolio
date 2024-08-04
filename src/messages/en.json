@@ -1,0 +1,14 @@
+{
+    "Header": {
+        "Navbar" : {
+            "home" : "home",
+            "projects" : "projects",
+            "about" : "about",
+            "contact" : "contact"
+        },
+        "Message": {
+            "message": "Hello I'm <name>Morteza Porabdolahi</name>",
+            "description": "and this is my portfolio"
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "Header": {
+        "Navbar" : {
+            "home" : "خانه",
+            "projects" : "پروژه ها",
+            "about" : "درباره من",
+            "contact" : "تماس با من"
+        },
+        "Message": {
+            "message": "سلام من <name>مرتضی پورعبدالهی</name> هستم",
+            "description": "خوش اومدی :)"
+        }
+    }
+}
