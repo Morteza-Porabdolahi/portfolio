@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 
 import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
+import { type Locale } from "@/lib/types";
 import { Toaster } from "@/components/ui/sooner";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
@@ -16,11 +17,12 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+  params,
+}: Readonly<{ children: React.ReactNode; params: { lang: Locale } }>) {
   const messages = await getMessages();
 
   return (
-    <html lang="en" className={`dark ${GeistSans.variable}`}>
+    <html lang={params.lang} dir={params.lang === 'fa' ? 'rtl' : 'ltr'} className={`dark ${GeistSans.variable}`}>
       <body>
         <NextIntlClientProvider messages={messages}>
           {children}
