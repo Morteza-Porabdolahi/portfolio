@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 
 import { GeistSans } from "geist/font/sans";
+import { Vazirmatn } from "next/font/google";
 import { type Metadata } from "next";
 import { type Locale } from "@/lib/types";
 import { Toaster } from "@/components/ui/sooner";
@@ -15,6 +16,8 @@ export const metadata: Metadata = {
   icons: [{ rel: "icon", url: "/favicon.png" }],
 };
 
+const vazir = Vazirmatn({ display: "swap", weight: "400" });
+
 export default async function RootLayout({
   children,
   params,
@@ -25,7 +28,7 @@ export default async function RootLayout({
     <html
       lang={params.lang}
       dir={params.lang === "fa" ? "rtl" : "ltr"}
-      className={`dark ${GeistSans.variable}`}
+      className={`dark ${params.lang === "fa" ? vazir.className : GeistSans.variable}`}
     >
       <body>
         <NextIntlClientProvider messages={messages}>
