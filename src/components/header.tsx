@@ -16,7 +16,7 @@ export default function Header() {
         className="-z-10 object-cover"
       />
       <MainNav />
-      <h1 className="flex flex-col items-center gap-2 text-center text-4xl font-thin lg:text-6xl">
+      <h1 className="flex flex-col items-center gap-5 text-center text-4xl font-thin lg:text-6xl">
         {t.rich("message", {
           name: (myName) => (
             <b className="text-3xl font-black lg:text-5xl">{myName}</b>

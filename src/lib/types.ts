@@ -47,6 +47,7 @@ export const formSchema = zfd.formData(
 );
 
 export type ProjectType = {
+  id: string;
   name: string;
   url: string;
   source_code_url: string;
