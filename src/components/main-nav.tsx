@@ -43,7 +43,7 @@ export default function MainNav() {
         />
       </div>
       <ul
-        className={`${isActive ? "shadow-md shadow-gray-600 sm:bg-foreground sm:text-background" : "sm:bg-transparent sm:text-foreground"} flex origin-top-left flex-col gap-7 bg-foreground pb-8 pl-8 pt-3 uppercase text-background [transition:transform_500ms,border-radius_900ms,background-color_200ms] sm:flex-row sm:justify-center sm:gap-9 sm:pl-0 sm:pt-8 sm:[transition:transform_500ms,border-radius_900ms,background-color_0s] ${isOpen ? "scale-1 rounded-none" : "scale-0 [border-bottom-right-radius:30rem]"}`}
+        className={`${isActive ? "shadow-md shadow-gray-600 sm:bg-foreground sm:text-background" : "sm:bg-transparent sm:text-foreground"} flex flex-col gap-7 bg-foreground pb-8 pt-3 uppercase text-background [transition:transform_500ms,border-radius_900ms,background-color_200ms] sm:flex-row sm:justify-center sm:gap-9 sm:pl-0 sm:pt-8 sm:[transition:transform_500ms,border-radius_900ms,background-color_0s] ltr:origin-top-left ltr:pl-8 rtl:origin-top-right rtl:pr-8 ${isOpen ? "scale-1 rounded-none" : "scale-0 ltr:[border-bottom-right-radius:30rem] rtl:[border-bottom-left-radius:30rem]"}`}
       >
         <li
           className={`transition-[opacity] delay-300 ${isOpen ? "opacity-1" : "opacity-0"}`}
