@@ -2,6 +2,7 @@
 
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useTranslations } from "next-intl";
 
 import { Form, FormField, FormItem, FormControl, FormMessage } from "./ui/form";
 import { Input } from "./ui/input";
@@ -10,12 +11,16 @@ import { Textarea } from "./ui/textarea";
 import { sendMessageAction } from "@/lib/actions";
 import { Loader2 } from "lucide-react";
 
-import { formSchema, type formSchemaType } from "@/lib/types";
+import { formBaseSchema } from "@/lib/types";
 import { toast } from "sonner";
+import { z } from "zod";
 import Title from "./ui/title";
 
 export default function ContactForm() {
-  const form = useForm<formSchemaType>({
+  const t = useTranslations("Contact.ContactForm");
+  const formSchema = formBaseSchema(t);
+
+  const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     mode: "onChange",
     defaultValues: {
@@ -31,7 +36,7 @@ export default function ContactForm() {
     formState: { isSubmitting },
   } = form;
 
-  const onSubmit = async (data: formSchemaType) => {
+  const onSubmit = async (data: z.infer<typeof formSchema>) => {
     try {
       const res = await sendMessageAction(data);
 
@@ -50,7 +55,10 @@ export default function ContactForm() {
 
   return (
     <div className="flex-1">
-      <Title className="md:text-left" text={["Get", "In Touch"]} />
+      <Title
+        className="md:text-left"
+        text={[t("title.normal-part"), t("title.bold-part")]}
+      />
       <Form {...form}>
         <form
           className="flex flex-col gap-3"
@@ -62,7 +70,7 @@ export default function ContactForm() {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input placeholder="Your Name..." {...field} />
+                  <Input placeholder={t("name-label")} {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -74,7 +82,7 @@ export default function ContactForm() {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input placeholder="Your Email..." {...field} />
+                  <Input placeholder={t("email-label")} {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -86,7 +94,7 @@ export default function ContactForm() {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input placeholder="Your Phone..." {...field} />
+                  <Input placeholder={t("phone-label")} {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -98,7 +106,7 @@ export default function ContactForm() {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Textarea placeholder="Write a Message..." {...field} />
+                  <Textarea placeholder={t("message-label")} {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -112,10 +120,10 @@ export default function ContactForm() {
             {isSubmitting ? (
               <>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                submitting...
+                {t("onsubmit")}
               </>
             ) : (
-              "send message"
+              <>{t("submit-button")}</>
             )}
           </Button>
         </form>

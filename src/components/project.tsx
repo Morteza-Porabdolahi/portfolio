@@ -8,8 +8,11 @@ import {
 } from "./ui/card";
 
 import { ProjectType } from "@/lib/types";
+import { useTranslations } from "next-intl";
 
 export default function Project({ project }: { project: ProjectType }) {
+  const t = useTranslations("Projects");
+
   return (
     <Card className="project-media group w-full">
       <CardHeader>
@@ -21,7 +24,7 @@ export default function Project({ project }: { project: ProjectType }) {
           alt={project.name}
         />
       </CardHeader>
-      <CardFooter className="flex flex-col items-center gap-4">
+      <CardFooter className="flex flex-col items-center gap-6">
         <CardTitle>
           <a
             href={project.url}
@@ -40,7 +43,7 @@ export default function Project({ project }: { project: ProjectType }) {
             className="underline hover:no-underline"
             href={project.source_code_url}
           >
-            Source code
+            {t("source_code")}
           </a>
         </CardDescription>
       </CardFooter>

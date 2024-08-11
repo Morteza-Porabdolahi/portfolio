@@ -1,22 +1,16 @@
 import { Github, Heart, Linkedin } from "lucide-react";
 import Section from "./ui/section";
+import { useTranslations } from "next-intl";
 
 export default function Footer() {
+  const t = useTranslations("Footer");
   return (
     <footer className="mt-5">
       <Section>
         <p className="flex items-center justify-center gap-2 text-gray-400">
-          <span>Made with</span>
-          <Heart className="size-5 fill-red-800 stroke-red-800" />
-          <span>by</span>
-          <a
-            className="text-gray-500 underline hover:no-underline"
-            href="https://github.com/Morteza-Porabdolahi"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Morteza
-          </a>
+          {t.rich("description", {
+            i: () => <Heart className="size-5 fill-red-800 stroke-red-800" />,
+          })}
         </p>
         <div className="my-8 flex flex-wrap items-center justify-center gap-4">
           <a

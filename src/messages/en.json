@@ -23,7 +23,13 @@
       "normal-part": "About",
       "bold-part": "Me"
     },
-    "description": "19 year old teen looking for new opportunities to embrace new challenges along the way. A Front-End developer who's in love with developing better looking websites and willing to write simple and optimized code :)",
+    "Skills": {
+      "title": {
+        "normal-part": "Featured",
+        "bold-part": "Skills"
+      }
+    },
+    "description": "<span>19</span> year old teen looking for new opportunities to embrace new challenges along the way. A Front-End developer who's in love with developing better looking websites and willing to write simple and optimized code :)",
     "hire_me": "Hire me",
     "down_cv": "Download CV"
   },
@@ -37,7 +43,29 @@
       "email-label": "Your Email...",
       "phone-label": "Your Phone...",
       "message-label": "Wirte a Message...",
-      "submit-button": "Send Message"
+      "submit-button": "Send Message",
+      "success": "Your message has been sent successfully",
+      "error": "Something went wrong!",
+      "onsubmit": "sending...",
+      "errors": {
+        "name": {
+          "required": "Name is required",
+          "min": "Name should be at least 5 characters",
+          "max": "Name should be at most 20 characters",
+          "invalid": "Name should be a string!"
+        },
+        "email": "Please specify an email !",
+        "phone": {
+          "required": "Phone number is required",
+          "invalid": "Invalid phone number!"
+        },
+        "message": {
+          "required": "Message is required",
+          "min": "Message should be at least 5 characters",
+          "max": "Message should be at most 200 characters",
+          "invalid": "Message should be a text"
+        }
+      }
     },
     "ContactDetails": {
       "title": {

@@ -1,13 +1,16 @@
 "use server";
 
-import { formSchema, type formSchemaType } from "./types";
+import { formBaseSchema } from "./types";
 import EmailTemplate from "@/components/ui/email-template";
 import { resend } from "./resend";
+import { z } from "zod";
+import { getTranslations } from "next-intl/server";
 
 export async function sendMessageAction(
-  data: formSchemaType,
+  data: z.infer<ReturnType<typeof formBaseSchema>>,
 ): Promise<{ error?: string; message?: string }> {
-  const formData = formSchema.safeParse(data);
+  const t = await getTranslations("Contact.ContactForm");
+  const formData = formBaseSchema(t).safeParse(data);
 
   if (!formData.success) {
     let errMessage = "";
@@ -28,11 +31,11 @@ export async function sendMessageAction(
 
   if (error) {
     return {
-      error: "Something went wrong!",
+      error: t("error"),
     };
   }
 
   return {
-    message: "Message has been sent successfully!",
+    message: t("success"),
   };
 }

@@ -1,12 +1,16 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 import Section from "./ui/section";
 import Title from "./ui/title";
-import img from "@/../public/morteza.jpg";
 import FeaturedSkills from "./featured-skills";
 import AboutButtons from "./about-buttons";
 
+import img from "@/../public/morteza.jpg";
+
 export default function AboutMe() {
+  const t = useTranslations("About");
+
   return (
     <div id="about">
       <Section>
@@ -18,12 +22,14 @@ export default function AboutMe() {
             className="mb-10 rounded-xl sm:mb-0 sm:w-64 md:w-96"
           />
           <div className="sm:py-3">
-            <Title className="sm:mb-4" text={["About", "Me"]} />
+            <Title
+              className="sm:mb-4"
+              text={[t("title.normal-part"), t("title.bold-part")]}
+            />
             <p className="text-center text-gray-500">
-              <span className="text-3xl">19</span> year old teen looking for new
-              opportunities to embrace new challenges along the way. A Front-End
-              developer who&apos;s in love with developing better looking
-              websites and willing to write simple and optimized code :)
+              {t.rich("description", {
+                span: (chunks) => <span className="text-3xl">{chunks}</span>,
+              })}
             </p>
             <FeaturedSkills className="hidden min-[865px]:block" />
             <AboutButtons className="hidden lg:flex" />
