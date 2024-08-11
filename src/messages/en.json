@@ -1,54 +1,54 @@
 {
-    "Header": {
-        "Navbar": {
-            "home": "home",
-            "projects": "projects",
-            "about": "about",
-            "contact": "contact"
-        },
-        "Message": {
-            "message": "Hello I'm <name>Morteza Porabdolahi</name>",
-            "description": "and this is my portfolio"
-        }
+  "Header": {
+    "Navbar": {
+      "home": "home",
+      "projects": "projects",
+      "about": "about",
+      "contact": "contact"
     },
-    "Projects": {
-        "title": {
-            "normal-part": "Featured",
-            "bold-part": "Projects"
-        },
-        "source_code": "Source code"
-    },
-    "About": {
-        "title": {
-            "normal-part": "About",
-            "bold-part": "Me"
-        },
-        "description": "19 year old teen looking for new opportunities to embrace new challenges along the way. A Front-End developer who's in love with developing better looking websites and willing to write simple and optimized code :)",
-        "hire_me": "Hire me",
-        "down_cv": "Download CV"
-    },
-    "Contact": {
-        "ContactForm": {
-            "title": {
-                "normal-part": "Get",
-                "bold-part": "In Touch"
-            },
-            "name-label": "Your Name...",
-            "email-label": "Your Email...",
-            "phone-label": "Your Phone...",
-            "message-label": "Wirte a Message...",
-            "submit-button": "Send Message"
-        },
-        "ContactDetails": {
-            "title": {
-                "normal-part": "Contact",
-                "bold-part": "details"
-            },
-            "email-label": "Email",
-            "phone-label": "Phone"
-        }
-    },
-    "Footer": {
-        "description": "Made with <i>heart icon</i> by Morteza"
+    "Message": {
+      "message": "Hello I'm <name>Morteza Porabdolahi</name>",
+      "description": "and this is my portfolio"
     }
+  },
+  "Projects": {
+    "title": {
+      "normal-part": "Featured",
+      "bold-part": "Projects"
+    },
+    "source_code": "Source code"
+  },
+  "About": {
+    "title": {
+      "normal-part": "About",
+      "bold-part": "Me"
+    },
+    "description": "19 year old teen looking for new opportunities to embrace new challenges along the way. A Front-End developer who's in love with developing better looking websites and willing to write simple and optimized code :)",
+    "hire_me": "Hire me",
+    "down_cv": "Download CV"
+  },
+  "Contact": {
+    "ContactForm": {
+      "title": {
+        "normal-part": "Get",
+        "bold-part": "In Touch"
+      },
+      "name-label": "Your Name...",
+      "email-label": "Your Email...",
+      "phone-label": "Your Phone...",
+      "message-label": "Wirte a Message...",
+      "submit-button": "Send Message"
+    },
+    "ContactDetails": {
+      "title": {
+        "normal-part": "Contact",
+        "bold-part": "details"
+      },
+      "email-label": "Email",
+      "phone-label": "Phone"
+    }
+  },
+  "Footer": {
+    "description": "Made with <i>heart icon</i> by Morteza"
+  }
 }

@@ -1,54 +1,54 @@
 {
-    "Header": {
-        "Navbar": {
-            "home": "خانه",
-            "projects": "پروژه ها",
-            "about": "درباره من",
-            "contact": "تماس با من"
-        },
-        "Message": {
-            "message": "سلام من <name>مرتضی پورعبدالهی</name> هستم",
-            "description": "خوش اومدی :)"
-        }
+  "Header": {
+    "Navbar": {
+      "home": "خانه",
+      "projects": "پروژه ها",
+      "about": "درباره من",
+      "contact": "تماس با من"
     },
-    "Projects": {
-        "title": {
-            "normal-part": "برجسته",
-            "bold-part": "پروژه های"
-        },
-        "source_code": "سورس کد"
-    },
-    "About": {
-        "title": {
-            "normal-part": "درباره",
-            "bold-part": "من"
-        },
-        "description": " یه جوون 19 ساله که دنبال چالش های جدید توی حوزه کاری خودش یعنی Front-end هستش و علاقه خیلی زیادی به نوشتن کد های بهینه و ساده داره :)",
-        "hire_me": "استخدامم کن",
-        "down_cv": "دانلود رزومه"
-    },
-    "Contact": {
-        "ContactForm": {
-            "title": {
-                "normal-part": "با من",
-                "bold-part": "در تماس باش"
-            },
-            "name-label": "نام شما...",
-            "email-label": "ایمیل شما...",
-            "phone-label": "شماره تلفن...",
-            "message-label": "یه پیام بنویسید...",
-            "submit-button": "ارسال پیام"
-        },
-        "ContactDetails": {
-            "title": {
-                "normal-part": "اطلاعات",
-                "bold-part": "تماس"
-            },
-            "email-label": "ایمیل",
-            "phone-label": "شماره تلفن..."
-        }
-    },
-    "Footer": {
-        "description": "نوشته شده توسط مرتضی با <i>heart icon</i>"
+    "Message": {
+      "message": "سلام من <name>مرتضی پورعبدالهی</name> هستم",
+      "description": "خوش اومدی :)"
     }
+  },
+  "Projects": {
+    "title": {
+      "normal-part": "برجسته",
+      "bold-part": "پروژه های"
+    },
+    "source_code": "سورس کد"
+  },
+  "About": {
+    "title": {
+      "normal-part": "درباره",
+      "bold-part": "من"
+    },
+    "description": " یه جوون 19 ساله که دنبال چالش های جدید توی حوزه کاری خودش یعنی Front-end هستش و علاقه خیلی زیادی به نوشتن کد های بهینه و ساده داره :)",
+    "hire_me": "استخدامم کن",
+    "down_cv": "دانلود رزومه"
+  },
+  "Contact": {
+    "ContactForm": {
+      "title": {
+        "normal-part": "با من",
+        "bold-part": "در تماس باش"
+      },
+      "name-label": "نام شما...",
+      "email-label": "ایمیل شما...",
+      "phone-label": "شماره تلفن...",
+      "message-label": "یه پیام بنویسید...",
+      "submit-button": "ارسال پیام"
+    },
+    "ContactDetails": {
+      "title": {
+        "normal-part": "اطلاعات",
+        "bold-part": "تماس"
+      },
+      "email-label": "ایمیل",
+      "phone-label": "شماره تلفن..."
+    }
+  },
+  "Footer": {
+    "description": "نوشته شده توسط مرتضی با <i>heart icon</i>"
+  }
 }

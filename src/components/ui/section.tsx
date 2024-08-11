@@ -1,10 +1,5 @@
-import type { ReactNode } from 'react'
+import type { ReactNode } from "react";
 
 export default function Section({ children }: { children: ReactNode }) {
-  return (
-    <section className='pt-20 px-5 max-w-5xl mx-auto'>
-      {children}
-    </section>
-  )
+  return <section className="mx-auto max-w-5xl px-5 pt-20">{children}</section>;
 }
-

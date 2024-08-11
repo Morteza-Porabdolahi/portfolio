@@ -1,9 +1,21 @@
-import type { formSchemaType } from '@/lib/types'
+import type { formSchemaType } from "@/lib/types";
 
-import { Html, Container, Head, Font, Heading, Hr, Text } from '@react-email/components'
+import {
+  Html,
+  Container,
+  Head,
+  Font,
+  Heading,
+  Hr,
+  Text,
+} from "@react-email/components";
 
-
-export default function EmailTemplate({ name, phone, message, email }: formSchemaType) {
+export default function EmailTemplate({
+  name,
+  phone,
+  message,
+  email,
+}: formSchemaType) {
   return (
     <Html lang="en">
       <Head>
@@ -19,12 +31,13 @@ export default function EmailTemplate({ name, phone, message, email }: formSchem
         />
       </Head>
       <Container>
-        <Heading as='h1'>{name}/{email}</Heading>
+        <Heading as="h1">
+          {name}/{email}
+        </Heading>
         <Hr />
         <Text>{message}</Text>
         <Text>Phone Number: {phone}</Text>
       </Container>
     </Html>
-  )
+  );
 }
-

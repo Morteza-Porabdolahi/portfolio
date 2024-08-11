@@ -22,7 +22,11 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={params.lang} dir={params.lang === 'fa' ? 'rtl' : 'ltr'} className={`dark ${GeistSans.variable}`}>
+    <html
+      lang={params.lang}
+      dir={params.lang === "fa" ? "rtl" : "ltr"}
+      className={`dark ${GeistSans.variable}`}
+    >
       <body>
         <NextIntlClientProvider messages={messages}>
           {children}

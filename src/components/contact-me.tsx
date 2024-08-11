@@ -12,6 +12,5 @@ export default function ContactMe() {
         </div>
       </Section>
     </div>
-  )
+  );
 }
-
