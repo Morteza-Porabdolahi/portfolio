@@ -17,7 +17,7 @@ export default function Project({ project }: { project: ProjectType }) {
     <Card className="project-media group w-full">
       <CardHeader>
         <Image
-          className="h-64 rounded object-cover transition-all group-hover:scale-105"
+          className="mb-3 h-64 rounded object-cover transition-all group-hover:scale-105"
           width={400}
           height={400}
           src={project.image}

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   icons: [{ rel: "icon", url: "/favicon.png" }],
 };
 
-const vazir = Vazirmatn({ display: "swap", weight: "400" });
+const vazir = Vazirmatn({ display: "swap", subsets: ["arabic"] });
 
 export default async function RootLayout({
   children,
