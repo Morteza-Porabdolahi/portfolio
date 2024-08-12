@@ -4,6 +4,7 @@ import { Bars3Icon } from "@heroicons/react/24/outline";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import LangSwitcher from "./ui/lang-switcher";
 
 export default function MainNav() {
   const t = useTranslations("Header.Navbar");
@@ -36,14 +37,15 @@ export default function MainNav() {
 
   return (
     <nav className="fixed left-0 right-0 top-0 z-10 h-0">
-      <div className="bg-foreground p-4 shadow-md shadow-gray-600 sm:hidden">
+      <div className="flex items-center justify-between bg-foreground p-4 shadow-md shadow-gray-600 sm:hidden">
         <Bars3Icon
           onClick={() => setIsOpen((o) => !o)}
           className="size-8 cursor-pointer stroke-background"
         />
+        <LangSwitcher />
       </div>
       <ul
-        className={`${isActive ? "shadow-md shadow-gray-600 sm:bg-foreground sm:text-background" : "sm:bg-transparent sm:text-foreground"} flex flex-col gap-7 bg-foreground pb-8 pt-3 uppercase text-background [transition:transform_500ms,border-radius_900ms,background-color_200ms] sm:flex-row sm:justify-center sm:gap-9 sm:pl-0 sm:pt-8 sm:[transition:transform_500ms,border-radius_900ms,background-color_0s] ltr:origin-top-left ltr:pl-8 rtl:origin-top-right rtl:pr-8 ${isOpen ? "scale-1 rounded-none" : "scale-0 ltr:[border-bottom-right-radius:30rem] rtl:[border-bottom-left-radius:30rem]"}`}
+        className={`${isActive ? "shadow-md shadow-gray-600 sm:bg-foreground sm:text-background" : "sm:bg-transparent sm:text-foreground"} flex flex-col gap-7 bg-foreground pb-8 pt-3 uppercase text-background [transition:transform_500ms,border-radius_900ms,background-color_200ms] sm:flex-row sm:items-center sm:justify-center sm:gap-9 sm:pl-0 sm:pt-8 sm:[transition:transform_500ms,border-radius_900ms,background-color_0s] ltr:origin-top-left ltr:pl-8 rtl:origin-top-right rtl:pr-8 ${isOpen ? "scale-1 rounded-none" : "scale-0 ltr:[border-bottom-right-radius:30rem] rtl:[border-bottom-left-radius:30rem]"}`}
       >
         <li
           className={`transition-[opacity] delay-300 ${isOpen ? "opacity-1" : "opacity-0"}`}
@@ -72,6 +74,9 @@ export default function MainNav() {
           <Link href="#contact" className="nav-link">
             {t("contact")}
           </Link>
+        </li>
+        <li className="hidden sm:block">
+          <LangSwitcher className="border-0 bg-transparent" />
         </li>
       </ul>
     </nav>
