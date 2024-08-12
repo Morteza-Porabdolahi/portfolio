@@ -1,8 +1,9 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Title from "./ui/title";
 
 export default function ContactDetails() {
   const t = useTranslations("Contact.ContactDetails");
+  const locale = useLocale();
 
   return (
     <div className="flex-1">
@@ -23,7 +24,9 @@ export default function ContactDetails() {
           <span className="mb-4 block uppercase text-gray-500">
             {t("phone-label")}
           </span>
-          <span className="ml-2 text-gray-400">+98 9146757492</span>
+          <span className="ml-2 text-gray-400">
+            {locale === "fa" ? "۹۱۴۶۷۵۷۴۹۲ ۹۸+" : "+98 9146757492"}
+          </span>
         </li>
       </ul>
     </div>
