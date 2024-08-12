@@ -29,7 +29,7 @@ const config = {
 };
 
 const withSerwist = withSerwistInit({
-  swSrc: "src/sw.ts",
+  swSrc: "src/app/sw.ts",
   swDest: "public/sw.js",
 });
 
