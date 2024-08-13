@@ -21,6 +21,7 @@ export default function Project({ project }: { project: ProjectType }) {
           width={400}
           height={400}
           src={project.image}
+          sizes="(min-width: 600px) 50vw, (min-width: 968px) 33vw, 100vw"
           alt={project.name}
         />
       </CardHeader>
