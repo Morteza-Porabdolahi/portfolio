@@ -14,7 +14,7 @@ export default async function Projects({ lang }: { lang: Locale }) {
     <div id="projects">
       <Section>
         <Title text={[t("title.normal-part"), t("title.bold-part")]} />
-        <div className="flex flex-wrap justify-between gap-6">
+        <div className="flex flex-wrap gap-6">
           {projects.map((project) => (
             <Project key={project.id} project={project} />
           ))}
