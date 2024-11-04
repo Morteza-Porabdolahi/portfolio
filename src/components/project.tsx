@@ -25,19 +25,23 @@ export default function Project({ project }: { project: ProjectType }) {
           alt={project.name}
         />
       </CardHeader>
-      <CardFooter className="flex flex-col items-center gap-6">
-        <CardTitle>
-          <a
-            href={project.url}
-            target="_blank"
-            rel="noreferrer"
-            className="underline hover:no-underline min-[490px]:text-lg md:text-2xl"
-          >
-            {project.name}
-          </a>
-        </CardTitle>
-        <CardDescription className="flex h-40 flex-col justify-between gap-5 text-center">
-          <span className="block">{project.description}</span>
+      <CardFooter className="flex flex-col gap-6">
+        <div className="flex flex-col items-center justify-between text-center">
+          <CardTitle>
+            <a
+              href={project.url}
+              target="_blank"
+              rel="noreferrer"
+              className="mb-6 block underline hover:no-underline min-[490px]:text-lg md:text-2xl"
+            >
+              {project.name}
+            </a>
+          </CardTitle>
+          <CardDescription className="flex h-40 flex-col justify-between gap-5 text-center">
+            <span className="block">{project.description}</span>
+          </CardDescription>
+        </div>
+        <CardDescription>
           <a
             target="_blank"
             rel="noreferrer"

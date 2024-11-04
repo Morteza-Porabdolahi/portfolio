@@ -53,7 +53,7 @@ export default async function RootLayout({
     <html
       lang={params.lang}
       dir={params.lang === "fa" ? "rtl" : "ltr"}
-      className={`dark ${params.lang === "fa" ? vazir.className : GeistSans.variable}`}
+      className={`dark ${params.lang === "fa" ? vazir.className : GeistSans.className}`}
     >
       <body>
         <NextIntlClientProvider messages={messages}>
