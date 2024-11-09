@@ -6,7 +6,7 @@ export default function Header() {
   const t = useTranslations("Header.Message");
   return (
     <header
-      className="relative flex min-h-dvh flex-col items-center justify-center gap-8 px-5"
+      className="relative flex min-h-screen flex-col items-center justify-center gap-8 px-5 supports-[min-height:100dvh]:min-h-dvh"
       id="header"
     >
       <Image
