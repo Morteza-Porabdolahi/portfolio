@@ -16,14 +16,6 @@
     "image": "https://utfs.io/f/733c3bf1-9100-48eb-87f3-36eea20804ec-4ayo37.png"
   },
   {
-    "id": 3,
-    "name": "Meta Theme",
-    "url": "https://online-shop-morteza355.vercel.app/",
-    "source_code_url": "https://github.com/Morteza-Porabdolahi/OnlineShop",
-    "description": "An online shop named MetaTheme made with Vanilla Javascript and Vite to provide different products for our users like mock pictures, sound effects, vectors, fonts and etc.",
-    "image": "https://utfs.io/f/7176d059-2a77-4600-a07d-abeb9659a4f5-4ai2gc.png"
-  },
-  {
     "id": 4,
     "url": "https://natours-morteza355.vercel.app/",
     "name": "Natours",
@@ -38,14 +30,6 @@
     "source_code_url": "https://github.com/Morteza-Porabdolahi/Nexter",
     "description": "At Nexter, your satisfaction is our priority. We are committed to providing a seamless and enjoyable experience as you embark on your journey to find the perfect property.",
     "image": "https://utfs.io/f/539181ac-c1b5-4960-ad1d-efb22d365f7f-49v2yz.png"
-  },
-  {
-    "id": 6,
-    "name": "Musipart",
-    "url": "https://musipart.vercel.app/",
-    "source_code_url": "https://github.com/Morteza-Porabdolahi/Musipart",
-    "description": "a Music Web Application Created By HTML/CSS/Javascript",
-    "image": "https://utfs.io/f/9eS8taOKDECHrqyWqJRQm5oRVHdSJqg178DwlPkTiEnp20Bu"
   },
   {
     "id": 7,
