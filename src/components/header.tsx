@@ -10,7 +10,7 @@ export default function Header() {
       id="header"
     >
       <Image
-        src="/morteza.jpg"
+        src="/morteza.png"
         alt="Morteza's face"
         fill
         className="-z-10 object-cover"
